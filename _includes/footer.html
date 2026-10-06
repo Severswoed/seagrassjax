@@ -1,9 +1,7 @@
 <footer class="site-footer">
   <div class="shell footer-main">
     <div>
-      <a class="brand brand-footer" href="{{ '/' | relative_url }}">
-        <img src="{{ '/assets/images/seagrassjax-logo-no%20background.png' | relative_url }}" alt="" width="1536" height="1024">
-      </a>
+      <a class="footer-wordmark" href="{{ '/' | relative_url }}">Sea Grass <span>Lawn &amp; Landscape</span></a>
       <p class="footer-note">Straightforward lawn care for Jacksonville-area homes, businesses, and rental properties.</p>
     </div>
     <div class="footer-links">
@@ -19,5 +17,13 @@
       <a class="footer-estimate" href="{{ '/estimate/' | relative_url }}">Request a free estimate <span aria-hidden="true">→</span></a>
     </div>
   </div>
-  <div class="shell footer-bottom"><span>© {{ site.time | date: '%Y' }} {{ site.data.business.name }}.</span><span>Jacksonville, Florida</span></div>
+  <div class="footer-bottom">
+    <div class="shell footer-bottom-inner">
+      <span class="footer-copyright">© {{ site.time | date: '%Y' }} {{ site.data.business.name }}.</span>
+      <a class="footer-bottom-logo" href="{{ '/' | relative_url }}" aria-label="Sea Grass Lawn &amp; Landscape home">
+        <img src="{{ '/assets/images/seagrassjax-logo-no%20background.png' | relative_url }}" alt="Sea Grass Lawn &amp; Landscape" width="1536" height="1024">
+      </a>
+      <span class="footer-location">Jacksonville, Florida</span>
+    </div>
+  </div>
 </footer>
