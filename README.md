@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="assets/images/seagrassjax-logo.png" alt="Sea Grass Lawn & Landscape" width="420">
+	<img src="assets/images/seagrassjax-logo-no%20background.png" alt="Sea Grass Lawn & Landscape" width="420">
 </p>
 
 <p align="center">
@@ -36,7 +36,7 @@ The generated website is in `_site/`. Jekyll sitemap generation is handled by th
 - Edit the service list in [_data/services.yml](_data/services.yml).
 - Edit page copy in the matching page file (home, `residential/`, `commercial/`, `property-managers/`, `services/`, or `estimate/`).
 - The header/footer are in `_includes/`; responsive styles in `assets/css/site.css` use the exact brand hex colors shown in `assets/images/theme.png`.
-- The supplied full Sea Grass manatee/grass logo is `assets/images/seagrassjax-logo.png` and is used as the header/footer brand mark and PNG favicon.
+- The supplied transparent Sea Grass manatee/grass logo is `assets/images/seagrassjax-logo-no background.png` and is used as the header/footer brand mark and PNG favicon.
 
 No phone number, public address, email address, price, review, credential, guarantee, or response time is assumed in the site.
 
