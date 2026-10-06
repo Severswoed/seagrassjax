@@ -1,0 +1,23 @@
+<footer class="site-footer">
+  <div class="shell footer-main">
+    <div>
+      <a class="brand brand-footer" href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/images/seagrassjax-logo.png' | relative_url }}" alt="" width="1536" height="1024">
+      </a>
+      <p class="footer-note">Straightforward lawn care for Jacksonville-area homes, businesses, and rental properties.</p>
+    </div>
+    <div class="footer-links">
+      <span class="footer-label">Explore</span>
+      <a href="{{ '/residential/' | relative_url }}">Residential lawn care</a>
+      <a href="{{ '/commercial/' | relative_url }}">Commercial lawn care</a>
+      <a href="{{ '/property-managers/' | relative_url }}">Property managers</a>
+      <a href="{{ '/services/' | relative_url }}">All services</a>
+    </div>
+    <div class="footer-links">
+      <span class="footer-label">Service area</span>
+      {% for area in site.data.business.service_areas %}<span>{{ area }}</span>{% endfor %}
+      <a class="footer-estimate" href="{{ '/estimate/' | relative_url }}">Request a free estimate <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+  <div class="shell footer-bottom"><span>© {{ site.time | date: '%Y' }} {{ site.data.business.name }}.</span><span>Jacksonville, Florida</span></div>
+</footer>

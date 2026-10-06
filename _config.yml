@@ -1,0 +1,27 @@
+title: Sea Grass Lawn & Landscape
+description: Lawn care and landscape cleanup for homes, businesses, property managers, and rental owners in Jacksonville, Florida.
+url: https://seagrassjax.com
+baseurl: ""
+lang: en-US
+timezone: America/New_York
+permalink: pretty
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+sass:
+  style: compressed
+exclude:
+  - README.md
+  - SECURITY.md
+  - LICENSE
+  - _docs
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github
+  - .vscode
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

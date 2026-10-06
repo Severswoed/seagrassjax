@@ -1,0 +1,10 @@
+name: Sea Grass Lawn & Landscape
+owner: Ethan
+description: Lawn care and landscape cleanup for homes, businesses, property managers, and rental owners in Jacksonville, Florida.
+service_areas:
+  - San Marco
+  - Orange Park
+  - Mandarin
+  - Baymeadows
+form_endpoint: https://api.web3forms.com/submit
+form_access_key: 4255804b-84c9-41f0-88c0-749952fc8100

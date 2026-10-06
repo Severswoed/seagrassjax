@@ -1,0 +1,35 @@
+---
+layout: default
+title: Lawn Care in Jacksonville, FL
+description: Sea Grass Lawn & Landscape provides residential and commercial lawn care, rental-property cleanup, and free estimates in Jacksonville, Florida.
+permalink: /
+---
+<section class="hero">
+  <div class="shell hero-inner">
+    <span class="eyebrow">Free estimates · Jacksonville</span>
+    <h1>A cared-for yard makes a difference.</h1>
+    <p class="hero-copy">Lawn care and outdoor cleanup for homes, businesses, and rentals. Tell Ethan what your property needs.</p>
+    <div class="actions">
+      <a class="button" href="{{ '/estimate/' | relative_url }}">Request a free estimate <span aria-hidden="true">→</span></a>
+      <a class="button button-secondary" href="{{ '/services/' | relative_url }}">Explore services</a>
+    </div>
+    <div class="area-strip" aria-label="Service areas">
+      <strong>Serving</strong>
+      <ul class="area-list">{% for area in site.data.business.service_areas %}<li>{{ area }}</li>{% endfor %}</ul>
+    </div>
+  </div>
+</section>
+<section class="section" aria-labelledby="who-we-help">
+  <div class="shell">
+    <div class="section-head"><span class="eyebrow">One local crew, a few kinds of yards</span><h2 id="who-we-help">The right kind of help for your property.</h2><p>From a regular mow to a fresh start between tenants, get in touch about the work you need.</p></div>
+    <div class="audience-grid">
+      <article class="audience-item"><span class="item-number">01 / HOME</span><h3>Residential</h3><p>Keep the lawn and beds at home neat with mowing, trimming, and seasonal cleanup.</p><a class="text-link" href="{{ '/residential/' | relative_url }}">Residential lawn care <span aria-hidden="true">→</span></a></article>
+      <article class="audience-item"><span class="item-number">02 / BUSINESS</span><h3>Commercial</h3><p>Care for the outdoor spaces around your business or commercial property.</p><a class="text-link" href="{{ '/commercial/' | relative_url }}">Commercial lawn care <span aria-hidden="true">→</span></a></article>
+      <article class="audience-item"><span class="item-number">03 / RENTALS</span><h3>Property managers</h3><p>Coordinate mowing and tenant-turnover cleanups across one rental or several.</p><a class="text-link" href="{{ '/property-managers/' | relative_url }}">Rental-property lawn care <span aria-hidden="true">→</span></a></article>
+    </div>
+  </div>
+</section>
+<section class="section section-cream" aria-labelledby="home-services"><div class="shell service-preview"><div><span class="eyebrow">Care for the whole yard</span><h2 id="home-services">A tidy lawn, without the fuss.</h2><p>Choose the work you need, from routine mowing to a one-time cleanup. Estimates are based on your property and the services requested.</p><a class="text-link" href="{{ '/services/' | relative_url }}">See all services <span aria-hidden="true">→</span></a></div><ul class="service-list"><li>Mowing, edging &amp; string trimming</li><li>Bush and flower bed cleanup</li><li>Mulch installation</li><li>Leaf and seasonal cleanup</li><li>Yard cleanup between tenants</li><li>Storm debris removal</li><li>Driveway and patio pressure washing</li><li>Gutter and downspout cleaning</li></ul></div></section>
+<section class="section" aria-labelledby="rental-help"><div class="shell"><div class="manager-band"><div><span class="eyebrow">For property managers &amp; rental owners</span><h2 id="rental-help">A lawn-care contact for your rentals.</h2><p>Send the addresses and what each property needs. We’ll work out a schedule and price based on the work, whether it’s regular mowing or a cleanup before a new tenant moves in.</p></div><a class="button" href="{{ '/property-managers/' | relative_url }}">How rental service works <span aria-hidden="true">→</span></a></div></div></section>
+<section class="section section-cream" aria-labelledby="service-area-heading"><div class="shell areas-row"><h2 id="service-area-heading">Jacksonville, close to home.</h2><ul class="area-pills">{% for area in site.data.business.service_areas %}<li>{{ area }}</li>{% endfor %}</ul></div></section>
+<section class="section section-dark"><div class="shell cta-panel"><div><span class="eyebrow">A clear place to start</span><h2>Tell us about your yard.</h2><p>Request a free estimate for your home, business, or rental property.</p></div><a class="button" href="{{ '/estimate/' | relative_url }}">Get a free estimate <span aria-hidden="true">→</span></a></div></section>
