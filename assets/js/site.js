@@ -87,11 +87,10 @@
       return;
     }
 
-    const email = form.elements.namedItem("email").value.trim();
     const phone = form.elements.namedItem("phone").value.trim();
-    if (!email && !phone) {
-      announce("Please add an email address or phone number so Ethan can follow up.", "error");
-      (form.elements.namedItem("email")).focus();
+    if (!phone) {
+      announce("Please add a phone number so Ethan can follow up.", "error");
+      form.elements.namedItem("phone").focus();
       return;
     }
     if (!form.querySelector("input[name='service_frequency']:checked")) {
