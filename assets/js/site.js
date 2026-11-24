@@ -107,11 +107,17 @@
     const currentSpan = photoCycler.querySelector(".photo-cycler-current");
     const totalSpan = photoCycler.querySelector(".photo-cycler-total");
     
+    if (images.length === 0) return;
+    
     let currentIndex = 0;
     
     const showImage = (index) => {
       images.forEach((img, i) => {
-        img.classList.toggle("is-active", i === index);
+        if (i === index) {
+          img.classList.add("is-active");
+        } else {
+          img.classList.remove("is-active");
+        }
       });
       currentSpan.textContent = index + 1;
     };
@@ -133,7 +139,6 @@
     nextBtn?.addEventListener("click", goToNext);
     
     document.addEventListener("keydown", (event) => {
-      if (!photoCycler.closest("section")) return;
       if (event.key === "ArrowLeft") goToPrevious();
       if (event.key === "ArrowRight") goToNext();
     });
