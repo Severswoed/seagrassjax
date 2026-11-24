@@ -146,6 +146,9 @@ h1 { max-width: 900px; margin: 21px 0 20px; font-size: clamp(2.8rem, 7.8vw, 6.1r
 .check-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 15px; }
 .check-option { display: flex; align-items: flex-start; gap: 9px; color: var(--ink-muted); font-size: .91rem; }
 .check-option input { width: 18px; height: 18px; flex: 0 0 auto; margin: 3px 0 0; accent-color: var(--grass); }
+.radio-group { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 15px; }
+.radio-option { display: flex; align-items: flex-start; gap: 9px; color: var(--ink-muted); font-size: .91rem; }
+.radio-option input { width: 18px; height: 18px; flex: 0 0 auto; margin: 3px 0 0; accent-color: var(--grass); }
 .form-status { min-height: 1.5em; margin: 0; font-weight: 700; }
 .form-status[data-state="error"] { color: #9A3024; }
 .form-status[data-state="success"] { color: #286D28; }
@@ -155,6 +158,16 @@ h1 { max-width: 900px; margin: 21px 0 20px; font-size: clamp(2.8rem, 7.8vw, 6.1r
 .form-note p:last-child { margin-bottom: 0; }
 .form-note a { font-weight: 700; }
 .honeypot { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; }
+
+.photo-cycler { display: grid; gap: 18px; }
+.photo-cycler-viewport { position: relative; width: 100%; padding-bottom: 66.667%; background: var(--gulf); border-radius: 4px; overflow: hidden; }
+.photo-cycler-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .3s ease; }
+.photo-cycler-image.is-active { opacity: 1; }
+.photo-cycler-controls { display: flex; align-items: center; justify-content: center; gap: 20px; }
+.photo-cycler-btn { min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; padding: 8px; border: 1px solid var(--line); border-radius: 3px; background: var(--foam); color: var(--gulf); font-size: 1.5rem; font-weight: 300; cursor: pointer; transition: background-color .15s ease, border-color .15s ease; }
+.photo-cycler-btn:hover { background: var(--cream); border-color: var(--gulf); }
+.photo-cycler-counter { color: var(--gulf); font-weight: 650; font-size: .95rem; }
+.photo-cycler-current, .photo-cycler-total { font-weight: 700; }
 
 .site-footer { padding-top: 54px; background: var(--gulf); color: var(--foam); }
 .footer-main { display: grid; grid-template-columns: 1.2fr .8fr .8fr; gap: 50px; padding-bottom: 45px; }

@@ -12,6 +12,10 @@ description: Tell Sea Grass Lawn & Landscape about your property and the work yo
     <div class="field"><label for="address">Property address <span aria-hidden="true">*</span></label><input id="address" name="property_address" autocomplete="street-address" required maxlength="240"></div>
     <div class="field-row"><div class="field"><label for="email">Email <small>(optional)</small></label><input id="email" name="email" type="email" autocomplete="email" maxlength="254"></div><div class="field"><label for="phone">Phone <small>(optional)</small></label><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></div></div>
     <p class="field-help">Please provide at least one contact method: email or phone.</p>
+    <fieldset class="fieldset"><legend class="fieldset-legend">Service frequency <span aria-hidden="true">*</span></legend><div class="radio-group">
+      <label class="radio-option"><input type="radio" name="service_frequency" value="One-time service" required>One-time service</label>
+      <label class="radio-option"><input type="radio" name="service_frequency" value="Recurring service" required>Recurring service</label>
+    </div></fieldset>
     <fieldset class="fieldset"><legend class="fieldset-legend">Services desired <span aria-hidden="true">*</span> <small>(choose one or more)</small></legend><div class="check-grid">
       <label class="check-option"><input type="checkbox" name="services[]" value="Mowing, edging, string trimming, and blowing">Mowing, edging, string trimming, and blowing</label>
       <label class="check-option"><input type="checkbox" name="services[]" value="Bush trimming and flower bed cleanup">Bush trimming and flower bed cleanup</label>
@@ -22,6 +26,12 @@ description: Tell Sea Grass Lawn & Landscape about your property and the work yo
       <label class="check-option"><input type="checkbox" name="services[]" value="Pressure washing">Pressure washing</label>
       <label class="check-option"><input type="checkbox" name="services[]" value="Gutter and downspout cleaning">Gutter and downspout cleaning</label>
       <label class="check-option"><input type="checkbox" name="services[]" value="Other listed yard service">Another listed service</label>
+    </div></fieldset>
+    <fieldset class="fieldset"><legend class="fieldset-legend">Preferred method of contact <span aria-hidden="true">*</span> <small>(choose one or more)</small></legend><div class="check-grid">
+      <label class="check-option"><input type="checkbox" name="preferred_contact[]" value="Text">Text</label>
+      <label class="check-option"><input type="checkbox" name="preferred_contact[]" value="Phone">Phone</label>
+      <label class="check-option"><input type="checkbox" name="preferred_contact[]" value="Email">Email</label>
+      <label class="check-option"><input type="checkbox" name="preferred_contact[]" value="In person">In person</label>
     </div></fieldset>
     <div class="field"><label for="notes">Notes <small>(optional)</small></label><textarea id="notes" name="notes" maxlength="3000" placeholder="Anything else that would help us understand the work?"></textarea></div>
     <div class="field"><label for="other-addresses">Additional property addresses <small>(optional)</small></label><textarea id="other-addresses" name="additional_property_addresses" maxlength="3000" placeholder="For multiple properties, list the other addresses here."></textarea></div>

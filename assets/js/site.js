@@ -52,9 +52,19 @@
       (form.elements.namedItem("email")).focus();
       return;
     }
+    if (!form.querySelector("input[name='service_frequency']:checked")) {
+      announce("Please select a service frequency (one-time or recurring).", "error");
+      form.querySelector("input[name='service_frequency']").focus();
+      return;
+    }
     if (!form.querySelector("input[name='services[]']:checked")) {
       announce("Choose at least one service you are interested in.", "error");
       form.querySelector("input[name='services[]']").focus();
+      return;
+    }
+    if (!form.querySelector("input[name='preferred_contact[]']:checked")) {
+      announce("Choose at least one preferred method of contact.", "error");
+      form.querySelector("input[name='preferred_contact[]']").focus();
       return;
     }
     const captchaResponse = form.querySelector("textarea[name='h-captcha-response']");
@@ -88,4 +98,44 @@
       submitButton.textContent = originalButtonText;
     }
   });
+
+  const photoCycler = document.querySelector(".photo-cycler");
+  if (photoCycler) {
+    const images = photoCycler.querySelectorAll(".photo-cycler-image");
+    const prevBtn = photoCycler.querySelector(".photo-cycler-prev");
+    const nextBtn = photoCycler.querySelector(".photo-cycler-next");
+    const currentSpan = photoCycler.querySelector(".photo-cycler-current");
+    const totalSpan = photoCycler.querySelector(".photo-cycler-total");
+    
+    let currentIndex = 0;
+    
+    const showImage = (index) => {
+      images.forEach((img, i) => {
+        img.classList.toggle("is-active", i === index);
+      });
+      currentSpan.textContent = index + 1;
+    };
+    
+    const goToPrevious = () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    };
+    
+    const goToNext = () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    };
+    
+    totalSpan.textContent = images.length;
+    showImage(0);
+    
+    prevBtn?.addEventListener("click", goToPrevious);
+    nextBtn?.addEventListener("click", goToNext);
+    
+    document.addEventListener("keydown", (event) => {
+      if (!photoCycler.closest("section")) return;
+      if (event.key === "ArrowLeft") goToPrevious();
+      if (event.key === "ArrowRight") goToNext();
+    });
+  }
 })();
