@@ -28,7 +28,7 @@ description: Tell Sea Grass Lawn & Landscape about your property and the work yo
       <label class="check-option"><input type="checkbox" name="services[]" value="Other listed yard service">Another listed service</label>
     </div></fieldset>
     <fieldset class="fieldset"><legend class="fieldset-legend">Preferred method of contact <span aria-hidden="true">*</span> <small>(choose one or more)</small></legend><div class="check-grid">
-      <label class="check-option"><input type="checkbox" name="preferred_contact[]" value="Text">Text</label>
+      <label class="check-option"><input type="checkbox" name="preferred_contact[]" value="Text" checked>Text</label>
       <label class="check-option"><input type="checkbox" name="preferred_contact[]" value="Phone">Phone</label>
       <label class="check-option"><input type="checkbox" name="preferred_contact[]" value="Email">Email</label>
       <label class="check-option"><input type="checkbox" name="preferred_contact[]" value="In person">In person</label>

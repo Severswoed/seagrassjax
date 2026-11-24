@@ -23,6 +23,48 @@
     window.matchMedia("(min-width: 881px)").addEventListener("change", closeMenu);
   }
 
+  const photoCycler = document.querySelector(".photo-cycler");
+  if (photoCycler) {
+    const images = photoCycler.querySelectorAll(".photo-cycler-image");
+    const prevBtn = photoCycler.querySelector(".photo-cycler-prev");
+    const nextBtn = photoCycler.querySelector(".photo-cycler-next");
+    const currentSpan = photoCycler.querySelector(".photo-cycler-current");
+    const totalSpan = photoCycler.querySelector(".photo-cycler-total");
+
+    if (images.length) {
+      let currentIndex = 0;
+      const showImage = (index) => {
+        images.forEach((img, i) => {
+          img.classList.toggle("is-active", i === index);
+          img.setAttribute("aria-hidden", String(i !== index));
+        });
+        currentSpan.textContent = index + 1;
+      };
+      const goToPrevious = () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+      };
+      const goToNext = () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      };
+
+      totalSpan.textContent = images.length;
+      showImage(0);
+      prevBtn.addEventListener("click", goToPrevious);
+      nextBtn.addEventListener("click", goToNext);
+      photoCycler.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          goToPrevious();
+        } else if (event.key === "ArrowRight") {
+          event.preventDefault();
+          goToNext();
+        }
+      });
+    }
+  }
+
   const form = document.querySelector("[data-estimate-form]");
   if (!form) return;
 
@@ -99,48 +141,4 @@
     }
   });
 
-  const photoCycler = document.querySelector(".photo-cycler");
-  if (photoCycler) {
-    const images = photoCycler.querySelectorAll(".photo-cycler-image");
-    const prevBtn = photoCycler.querySelector(".photo-cycler-prev");
-    const nextBtn = photoCycler.querySelector(".photo-cycler-next");
-    const currentSpan = photoCycler.querySelector(".photo-cycler-current");
-    const totalSpan = photoCycler.querySelector(".photo-cycler-total");
-    
-    if (images.length === 0) return;
-    
-    let currentIndex = 0;
-    
-    const showImage = (index) => {
-      images.forEach((img, i) => {
-        if (i === index) {
-          img.classList.add("is-active");
-        } else {
-          img.classList.remove("is-active");
-        }
-      });
-      currentSpan.textContent = index + 1;
-    };
-    
-    const goToPrevious = () => {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      showImage(currentIndex);
-    };
-    
-    const goToNext = () => {
-      currentIndex = (currentIndex + 1) % images.length;
-      showImage(currentIndex);
-    };
-    
-    totalSpan.textContent = images.length;
-    showImage(0);
-    
-    prevBtn?.addEventListener("click", goToPrevious);
-    nextBtn?.addEventListener("click", goToNext);
-    
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "ArrowLeft") goToPrevious();
-      if (event.key === "ArrowRight") goToNext();
-    });
-  }
 })();
